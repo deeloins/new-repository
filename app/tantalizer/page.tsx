@@ -306,7 +306,7 @@ export function Tantalizer() {
             </ol>
             <span className="inline-block mt-5">
               Below is the summary of the challenges users faced with
-              Tantalizer’s old website.
+              Tantalizer&apos;s old website.
             </span>
           </div>
         </div>
