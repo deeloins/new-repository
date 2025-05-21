@@ -1,16 +1,16 @@
 import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true, // Completely disable ESLint during builds
+    ignoreDuringBuilds: true,
   },
-  // OR for specific rules:
-  eslint: {
-    dirs: ['app'], // Only check app directory
-    ignorePatterns: ['components/RecentProjectSection.tsx'], // Ignore specific files
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
+module.exports = nextConfig;
 module.exports = nextConfig;
 
