@@ -7,7 +7,7 @@ export default function VisitorPainPoints() {
       <div className="max-w-[996px] mx-auto">
         {/* Section Title */}
         <h2 className="font-figtree font-bold text-2xl md:text-[32px] leading-[40px] text-white mb-6 md:mb-8">
-          Website Visitor's Painpoint
+          Website Visitor&apos;s Painpoint
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-4">
@@ -28,7 +28,7 @@ export default function VisitorPainPoints() {
                 </span>
               </div>
               <p className="font-poppins font-normal text-sm md:text-base leading-6 text-[#BDBDBD] mt-10">
-                The calls-to-action are vague, and I don't know where to start
+                The calls-to-action are vague, and I don&apos;t know where to start
                 or what my next step should be.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function VisitorPainPoints() {
                 </span>
               </div>
               <p className="font-poppins font-normal text-sm md:text-base leading-6 text-[#BDBDBD] mt-10">
-                It's difficult to filter or search for properties based on
+                It&apos;s difficult to filter or search for properties based on
                 specific criteria, like location, price range, or property type.
               </p>
             </div>
