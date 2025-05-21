@@ -22,14 +22,11 @@
   z-index: -1;
 }
 
-.headerContainer {
+.rowContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  top: 2rem;
-  padding: 0 5rem;
+  padding: 20px;
 }
 
 .leftspace {
@@ -37,7 +34,9 @@
 }
 
 .centerToggle {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 
@@ -51,18 +50,20 @@
 }
 
 @media (max-width: 768px) {
-  .buttonContainer {
-    right: 2rem;
-    gap: 10rem;
-    padding-right: 24px;
-    padding-bottom: 100px;
+  .rowContainer {
+    margin-bottom: 5px;
+  }
+
+  .leftspace {
+    width: 50px;
   }
 
   .centerToggle {
-    position: absolute;
-    right: 190px;
-    top: 2rem;
-    /* adjust as needed */
-    transform: translateX(-50%);
+    margin-right: 3px;
+  }
+
+  .rightButton {
+    justify-content: flex-end;
+
   }
 }

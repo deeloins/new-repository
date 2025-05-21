@@ -35,7 +35,6 @@ export default function CaseStudyPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      
       <Image
         src="/assets/image.png"
         alt="Background"
@@ -47,20 +46,21 @@ export default function CaseStudyPage() {
       <Sidebar />
       <div className={styles.rowContainer}>
         <div className={styles.leftspace}></div>
-        <div className={styles.buttonContainer}>
-          <div className={styles.centerToggle}>
-            <ToggleButton
-              caseStudyPath="/case-study"
-              designPath="/my-care-assistants-design"
-              currentSection={currentSection}
-              setCurrentSection={setCurrentSection}
-            />
-          </div>
-          <div>
-            <NextProjectButton nextPath="./tantalizer" />
-          </div>
+
+        <div className={styles.centerToggle}>
+          <ToggleButton
+            caseStudyPath="/case-study"
+            designPath="/my-care-assistants-design"
+            currentSection={currentSection}
+            setCurrentSection={setCurrentSection}
+          />
+        </div>
+
+        <div>
+          <NextProjectButton nextPath="./tantalizer" />
         </div>
       </div>
+
       <HeroSection />
       <ClientOverview />
       <ProblemSolution />
