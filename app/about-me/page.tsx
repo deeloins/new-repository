@@ -1,171 +1,163 @@
 "use client";
 import Image from "next/image";
 import "../styling/bits.css";
-import Lty from "../images/companiesLogo (1).png";
-import kawts from "../images/companiesLogo (3).png";
-import thenod from "../images/companiesLogo (2).png";
-import tantalizer from "../images/companiesLogo (4).png";
 import { useState, useEffect } from "react";
-import picture1 from "../images/mrLawal_(1).png";
-import picture2 from "../images/mrLawal_(2).png";
-import picture4 from "../images/mrLawal_(4).png";
-import picture5 from "../images/mrLawal_(5).png";
-import picture6 from "../images/mrLawal_(6).png";
-import picture7 from "../images/mrLawal_(7).png";
-import picture8 from "../images/mrLawal_(8).png";
-import picture9 from "../images/mrLawal_(9).png";
-import picture10 from "../images/mrLawal_(10).png";
-import picture11 from "../images/mrLawal_(11).png";
 
-function Slider() {
-  const images = [
-    { src: picture1, width: 500, height: 500 },
-    { src: picture2, width: 500, height: 500 },
-    { src: picture4, width: 500, height: 500 },
-    { src: picture5, width: 500, height: 500 },
-    { src: picture6, width: 500, height: 500 },
-    { src: picture7, width: 500, height: 500 },
-    { src: picture8, width: 500, height: 500 },
-    { src: picture9, width: 500, height: 500 },
-    { src: picture10, width: 500, height: 500 },
-    { src: picture11, width: 500, height: 500 },
-  ];
+// Import images with better naming
+const companyLogos = {
+  lty: "/images/companiesLogo (1).png",
+  kawts: "/images/companiesLogo (3).png",
+  thenod: "/images/companiesLogo (2).png",
+  tantalizer: "/images/companiesLogo (4).png",
+};
 
-  const [index, setIndex] = useState(0);
+const portfolioImages = Array.from({ length: 11 }, (_, i) => 
+  `/images/mrLawal_(${i < 2 ? i + 1 : i + 2}).png` // Skips missing image 3
+);
+
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const intervalTimer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % portfolioImages.length);
     }, 3000);
-
-    return () => clearInterval(intervalTimer);
-  }, [images.length]);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="imageSlider">
+    <div className="relative w-full h-96 overflow-hidden rounded-lg shadow-lg">
       <Image
-        src={images[index].src}
-        width={images[index].width}
-        height={images[index].height}
-        className="image"
-        alt="Portfolio image"
+        src={portfolioImages[currentIndex]}
+        alt={`Portfolio image ${currentIndex + 1}`}
+        fill
+        className="object-cover transition-opacity duration-500"
         priority
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
   );
-}
+};
 
-function Experience() {
+const Experience = () => {
+  const experiences = [
+    {
+      period: "2024 - Now",
+      role: "Product Designer",
+      company: "Stringify Consulting",
+      type: "Remote"
+    },
+    {
+      period: "2023 - 2024",
+      role: "Intern Product Designer",
+      company: "Fiducia Data Service",
+      type: "Hybrid"
+    },
+    {
+      period: "2022 - 2023",
+      role: "Intern Product Designer",
+      company: "Handiworker Tech",
+      type: "Remote"
+    }
+  ];
+
   return (
-    <div className="p-3.5 w-90 border-[0.1rem] border-[#3b3a3a] rounded-xl bg-[#1f1c1c] experienceSection">
-      <h2 className="text-left">Experience</h2>
-
-      <section className="pt-5">
-        <div className="flex gap-10 pb-3 experience">
-          <div className="text-[#645d5d]">2024 - Now</div>
-          <div className="text-left">
-            <h2>Product Designer</h2>
-            <div className="flex text-[#645d5d]">
-              Stringify Consulting
-              <button className="remote">Remote</button>
+    <div className="w-full max-w-2xl p-6 border border-gray-700 rounded-xl bg-gray-900">
+      <h2 className="text-xl font-semibold text-white mb-6">Experience</h2>
+      
+      <div className="space-y-6">
+        {experiences.map((exp, index) => (
+          <div key={index} className="flex gap-6">
+            <div className="text-gray-400 min-w-[100px]">{exp.period}</div>
+            <div>
+              <h3 className="text-lg font-medium text-white">{exp.role}</h3>
+              <div className="flex items-center gap-2 text-gray-400">
+                {exp.company}
+                <span className="px-2 py-1 text-xs rounded-full bg-gray-800 text-gray-300">
+                  {exp.type}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
+      </div>
 
-        <div className="flex gap-10 pb-3 experience">
-          <div className="text-[#645d5d]">2023 - 2024</div>
-          <div className="text-left">
-            <h2>Intern Product Designer</h2>
-            <div className="flex text-[#645d5d] remotebtnflex">
-              Fiducia Data Service
-              <button className="remote">Hybrid</button>
+      <div className="my-6 border-t border-gray-700"></div>
+
+      <div className="space-y-3">
+        <p className="text-gray-400">Companies I've collaborated with</p>
+        <div className="flex flex-wrap gap-4">
+          {Object.entries(companyLogos).map(([name, src]) => (
+            <div key={name} className="relative w-12 h-12">
+              <Image
+                src={src}
+                alt={`${name} logo`}
+                fill
+                className="object-contain"
+              />
             </div>
-          </div>
+          ))}
         </div>
-
-        <div className="flex gap-10 pb-3 experience">
-          <div className="text-[#645d5d]">2022 - 2023</div>
-          <div className="text-left">
-            <h2>Intern Product Designer</h2>
-            <div className="flex text-[#645d5d]">
-              Handiworker Tech
-              <button className="remote">Remote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr className="h-0.5 mt-4 mb-4 divider" />
-
-      <section className="companyDiv">
-        <span className="text-[#645d5d]">
-          Companies I&apos;ve collaborated with
-        </span>
-        <div className="flex gap-9 mt-3.5 companylogos">
-          <Image src={Lty} alt="Lty logo" width={50} height={50} className="logo" />
-          <Image src={kawts} alt="Kawts logo" width={50} height={50} className="logo" />
-          <Image src={thenod} alt="Thenod logo" width={50} height={50} className="logo" />
-          <Image src={tantalizer} alt="Tantalizer logo" width={50} height={50} className="logo" />
-        </div>
-      </section>
+      </div>
     </div>
   );
-}
+};
 
-function Education() {
+const Education = () => {
+  const educationItems = [
+    {
+      period: "2016 - 2019",
+      degree: "B.Sc (Ed) Computer Science",
+      institution: "University of Nigeria, Nsukka"
+    },
+    {
+      period: "2024",
+      degree: "Figma UI UX Design Advanced",
+      institution: "Udemy (Daniel Walter Scott)"
+    },
+    {
+      period: "2024",
+      degree: "User Experience Design Fundamentals",
+      institution: "Udemy (Joe Natoli)"
+    },
+    {
+      period: "2024",
+      degree: "Google UX Design",
+      institution: "Coursera"
+    }
+  ];
+
   return (
-    <div className="p-5 w-90 border-[0.1rem] border-[#3b3a3a] rounded-xl bg-[#1f1c1c] experienceSection">
-      <h2 className="text-left pt-2.5">EDUCATION/CERTIFICATION</h2>
-
-      <section className="pt-5">
-        <div className="flex gap-5 pb-3 education">
-          <div className="text-[#3b3a3a]">2016 - 2019</div>
-          <div className="text-left">
-            <h2>B.Sc (Ed)Computer Science</h2>
-            <div className="flex text-[#3b3a3a]">
-              University of Nigeria, Nsukka
+    <div className="w-full max-w-2xl p-6 border border-gray-700 rounded-xl bg-gray-900">
+      <h2 className="text-xl font-semibold text-white mb-6">EDUCATION/CERTIFICATION</h2>
+      
+      <div className="space-y-6">
+        {educationItems.map((item, index) => (
+          <div key={index} className="flex gap-6">
+            <div className="text-gray-400 min-w-[60px]">{item.period}</div>
+            <div>
+              <h3 className="text-lg font-medium text-white">{item.degree}</h3>
+              <p className="text-gray-400">{item.institution}</p>
             </div>
           </div>
-        </div>
-
-        <div className="flex gap-18 pb-3 education">
-          <div className="text-[#3b3a3a]">2024</div>
-          <div className="text-left">
-            <h2>
-              Figma UI UX Design <br /> Advanced
-            </h2>
-            <div className="flex text-[#3b3a3a]">
-              Udemy &bull; Daniel Walter Scott
-            </div>
-          </div>
-        </div>
-
-        <div className="flex gap-18 pb-3 education">
-          <div className="text-[#3b3a3a]">2024</div>
-          <div className="text-left">
-            <h2>User Experience Design Fundamentals</h2>
-            <div className="flex text-[#3b3a3a]">Udemy &bull; Joe Natoli</div>
-          </div>
-        </div>
-
-        <div className="flex gap-18 pb-3 education">
-          <div className="text-[#3b3a3a]">2024</div>
-          <div className="text-left">
-            <h2>Google UX Design</h2>
-            <div className="flex text-[#3b3a3a]">Coursera</div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default function AboutMe() {
   return (
-    <section className="flex flex-col gap-y-6 justify-center items-center mt-8 aboutMe">
-      <Slider />
-      <Experience />
-      <Education />
-    </section>
+    <main className="min-h-screen py-12 bg-gray-950">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <Slider />
+          <div className="grid md:grid-cols-2 gap-6">
+            <Experience />
+            <Education />
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
