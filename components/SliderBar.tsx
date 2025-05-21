@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
 
       {/* Logo */}
       <div className={styles.logo}>
-        <Image src="/images/LAJ Logo 3.png" alt="Logo" width={24} height={24} />
+        <Image src="/images/LAJ logo 3.png" alt="Logo" width={24} height={24} />
       </div>
 
       {/* Navigation icons */}
