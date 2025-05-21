@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Slider } from "@/app/about-me/page";
+import Slider from "@/components/Slider";
 import Experience from "./Experience";
 import EducationCard from "./EducationCard";
 import ToolStackPage from "@/app/tools-stack/page";
