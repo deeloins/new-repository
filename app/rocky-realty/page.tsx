@@ -47,6 +47,7 @@ export default function RockRealty() {
             width={304}
             height={96}
             className="object-contain w-full h-full"
+            priority
           />
         </div>
         <h1
@@ -63,13 +64,12 @@ export default function RockRealty() {
       <section className="relative flex justify-center px-4 mt-8 md:mt-12">
         <div className="w-full max-w-[1096px]">
           <div className="relative w-full h-0 pb-[75.73%]">
-            {" "}
-            {/* 830/1096 = 75.73% aspect ratio */}
             <Image
               src="/assets/Rock Realty main.png"
               alt="Rock Realty Main"
               fill
               className="object-cover rounded-[16px] md:rounded-[32px]"
+              priority
             />
           </div>
         </div>
@@ -99,18 +99,18 @@ export default function RockRealty() {
         </div>
         <div className="w-full lg:w-[65%] text-[#BDBDBD] font-poppins text-[14px] md:text-[18px] leading-[24px] md:leading-[32px] font-normal">
           <p>
-             <span className="text-white font-bold">Overview:</span>{" "}
-            <span className="text-white">Rock Realty Limited</span> is a
-            Nigerian real estate firm dedicated to democratizing property
-            ownership and investment, focusing on accessibility for
-            middle-income earners. They offer a full spectrum of services, from
-            development and advisory to investment planning, built on principles
-            of transparency, integrity, and client-centricity.
+            <span className="text-white font-bold">Overview:</span>{" "}
+            <span className="text-white">Rock Realty Limited</span> is a Nigerian
+            real estate firm dedicated to democratizing property ownership and
+            investment, focusing on accessibility for middle-income earners. They
+            offer a full spectrum of services, from development and advisory to
+            investment planning, built on principles of transparency, integrity,
+            and client-centricity.
           </p>
           <p className="mt-4 md:mt-6">
             <span className="text-white">
               Recognizing the critical importance of a user-friendly digital
-              presence in today's market,
+              presence in today&apos;s market,
             </span>{" "}
             Rock Realty invested in a website redesign. This redesign aimed to
             enhance user experience, build trust, and simplify the often complex
@@ -128,19 +128,19 @@ export default function RockRealty() {
           THE PROBLEM
         </h2>
         <p className="text-white text-[18px] md:text-[32px] leading-[28px] md:leading-[56px] font-poppins">
-          <span className="font-bold">Lack of Clear Digital Presence:</span>{" "}
-          Rock Realty faces the need for a "strong digital presence", a
-          "user-friendly and informative online platform."
+          <span className="font-bold">Lack of Clear Digital Presence:</span> Rock
+          Realty faces the need for a &quot;strong digital presence&quot;, a
+          &quot;user-friendly and informative online platform.&quot;
           <br className="hidden md:block" />
           <span className="font-bold block md:inline mt-2 md:mt-0">
             Need for Enhanced User Experience:
           </span>{" "}
-          The current website wasn't well structured.
+          The current website wasn&apos;t well structured.
           <br className="hidden md:block" />
           <span className="font-bold block md:inline mt-2 md:mt-0">
             Building Trust:
           </span>{" "}
-          The current website hasn't effectively established credibility.
+          The current website hasn&apos;t effectively established credibility.
           <br className="hidden md:block" />
           <span className="font-bold block md:inline mt-2 md:mt-0">
             Need to simplify
@@ -152,14 +152,13 @@ export default function RockRealty() {
           THE SOLUTION
         </h2>
         <p className="text-[#BDBDBD] text-[18px] md:text-[32px] leading-[28px] md:leading-[56px] font-poppins">
-          To address these challenges, I redesigned Rock Realty's website to
+          To address these challenges, I redesigned Rock Realty&apos;s website to
           create a seamless and informative platform that simplifies the real
           estate process.
         </p>
       </section>
 
       {/* Company Logo */}
-      {/* Section 5: Company Logo Image - FIXED VERSION */}
       <section className="relative w-full max-w-[996px] mx-auto mt-12 md:mt-24 px-4">
         <div className="relative w-full h-0 pb-[47%] rounded-[12px] md:rounded-[20px] overflow-hidden bg-[#3A4D2A]">
           <Image
@@ -167,9 +166,11 @@ export default function RockRealty() {
             alt="Company Logo"
             fill
             className="object-contain p-4 md:p-8"
+            priority
           />
         </div>
       </section>
+
       {/* UX Audit */}
       <section className="max-w-[1024px] mx-auto mt-12 md:mt-24 px-6">
         <h2 className="font-figtree font-black text-[36px] md:text-[60px] leading-[44px] md:leading-[72px] text-white">
@@ -189,7 +190,6 @@ export default function RockRealty() {
           </span>
         </p>
 
-        {/* ✅ Moved the div OUTSIDE the paragraph */}
         <div className="space-y-4 pl-4">
           <div>
             <span className="text-white font-bold">
@@ -205,7 +205,7 @@ export default function RockRealty() {
           </div>
           <div>
             <span className="text-white font-bold">
-              Careful planning of the website's content structure:
+              Careful planning of the website&apos;s content structure:
             </span>{" "}
             Focusing on user-friendly experience.
           </div>
@@ -230,6 +230,7 @@ export default function RockRealty() {
             alt="Company Logo"
             fill
             className="object-cover"
+            priority
           />
         </section>
       </div>
