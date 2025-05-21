@@ -97,9 +97,9 @@ const AboutMeCards = () => {
           ABOUT ME
         </h3>
         <p className="text-white text-base leading-relaxed font-poppins">
-          Product design is more than a career; it's the result of a lifelong
+          Product design is more than a career; it&apos;s the result of a lifelong
           passion for exploration. I started with building WordPress sites and
-          blogging as a teen, I've always been drawn to creating and
+          blogging as a teen, I&apos;ve always been drawn to creating and
           problem-solving. Post-graduation, I tried data analytics because I
           felt my math skills would come in handy and then affiliate marketing
           drawn by its appeal. Though I found success in them, neither provided
