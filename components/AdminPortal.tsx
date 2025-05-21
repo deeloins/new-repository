@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 // Feature data array - defined before component
 const features = [
@@ -15,7 +16,7 @@ const features = [
   {
     number: "03",
     title: "Admin Workflow & UX",
-    text: "Understanding the administrator's workflow was paramount. I learned how to design intuitive admin interfaces that directly impact the end-user experience.",
+    text: "Understanding the administrator&apos;s workflow was paramount. I learned how to design intuitive admin interfaces that directly impact the end-user experience.",
   },
   {
     number: "04",
@@ -38,13 +39,13 @@ const AdminPortal: React.FC = () => {
   const responsive = {
     headerContainer: {
       padding: isMobile ? "40px 16px" : "80px 16px",
-      flexDirection: isMobile ? "column" : ("row" as "row" | "column"),
+      flexDirection: isMobile ? "column" : ("row" as const),
       gap: isMobile ? "24px" : "40px",
     },
     heading: {
       fontSize: isMobile ? "48px" : "80px",
       lineHeight: isMobile ? "56px" : "96px",
-      textAlign: isMobile ? "center" : ("left" as React.CSSProperties["textAlign"]),
+      textAlign: isMobile ? "center" : ("left" as const),
     },
     description: {
       fontSize: isMobile ? "18px" : "24px",
@@ -67,7 +68,7 @@ const AdminPortal: React.FC = () => {
     subHeading: {
       fontSize: isMobile ? "32px" : "48px",
       lineHeight: isMobile ? "38px" : "58px",
-      whiteSpace: isMobile ? "normal" : "nowrap" as const,
+      whiteSpace: isMobile ? "normal" : ("nowrap" as const),
     },
     learningIntro: {
       fontSize: isMobile ? "18px" : "24px",
@@ -92,10 +93,13 @@ const AdminPortal: React.FC = () => {
       <section style={styles.section}>
         {/* iMac Image Section */}
         <div style={{ ...styles.iMacContainer, ...responsive.iMacContainer }}>
-          <img
+          <Image
             src="/assets/iMac 24 inch.png"
             alt="Admin Portal Preview"
+            width={932}
+            height={549}
             style={styles.iMacImage}
+            priority
           />
         </div>
 
