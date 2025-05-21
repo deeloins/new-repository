@@ -35,7 +35,7 @@ export default function CaseStudyPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      /* Background Image */
+      
       <Image
         src="/assets/image.png"
         alt="Background"
