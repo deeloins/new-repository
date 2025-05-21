@@ -9,7 +9,7 @@ import coloredImage3 from "../images/recentCards (1).png";
 import "../styling/bits.css";
 import { useRouter } from "next/navigation";
 
-export function RecentProjectSection() {
+export default function RecentProjectSection() {
   const router = useRouter(); // Initialize the router
 
   // Function to handle button click
