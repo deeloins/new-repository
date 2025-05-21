@@ -269,47 +269,28 @@
     }
 }
 
+/* Existing desktop styles remain the same until mobile breakpoints */
+
 @media (max-width: 1024px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto;
-    }
-
-    .aboutMeCard {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .centerColumn {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .experienceCard {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .educationWrapper {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .toolsWrapper {
-        grid-column: 2;
-        grid-row: 3;
-    }
-}
-
-@media (max-width: 768px) {
-    .grid {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         gap: 20px;
     }
 
-    .heroCard,
-    .photoCard {
+    /* Reset all grid positioning for tablet */
+    .profileCard,
+    .aboutMeCard,
+    .centerColumn,
+    .experienceCard,
+    .educationWrapper,
+    .toolsWrapper {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    /* Specific adjustments for tablet */
+    .heroCard {
         height: 400px;
     }
 
@@ -318,87 +299,69 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 1300px) {
-    .educationToolsCard {
-        transform: none;
-        /* Remove transform on smaller screens */
-    }
-}
-
-@media (max-width: 1240px) {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: [row1] 100px [row2] auto [row3] auto;
-    }
-
-    .aboutMeCard {
-        margin-top: 0;
-        grid-area: 2 / 1;
-    }
-
-    .educationToolsContainer {
-        grid-area: 3 / 1 / span 1 / span 2;
-        gap: 20px;
-    }
-
-    .educationWrapper {
-        margin-top: 0;
-    }
-}
-
 @media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
     .grid {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
-    .heroCard,
-    .photoCard {
-        height: 400px;
+    /* Reset all absolute positioning for mobile */
+    .speechBubble1,
+    .speechBubble2,
+    .speechBubble3,
+    .speechBubble4 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 8px;
     }
 
-    .aboutMeCard {
-        margin-top: 0;
+    /* Adjust card heights for mobile */
+    .heroCard,
+    .photoCard {
+        height: 300px;
+        /* More appropriate for mobile */
+    }
+
+    /* Fix text sizing for mobile */
+    .bioText {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .aboutMeText {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* Stack social icons vertically if needed */
+    .socialIcons {
+        flex-wrap: wrap;
     }
 }
 
 @media (max-width: 480px) {
-    .bioText {
-        font-size: 20px;
-        line-height: 32px;
+
+    .heroCard,
+    .photoCard {
+        height: 250px;
     }
 
-    .cardContent {
+    .cardContent,
+    .aboutMeContent {
         padding: 16px;
-        gap: 16px;
     }
 
-    .speechBubble1 {
-        top: 320px;
-    }
-
-    .speechBubble2 {
-        top: 345px;
-    }
-
-    .speechBubble3 {
-        top: 370px;
-    }
-
-    .speechBubble4 {
-        top: 395px;
+    /* Further reduce font sizes for very small devices */
+    .bioText {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
