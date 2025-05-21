@@ -13,7 +13,7 @@ export default function ProblemSolution() {
       {/* Solution Section */}
       <h2 style={styles.heading}>THE SOLUTION</h2>
       <p style={styles.description}>
-        After thoroughly understanding MyCare Assistant's business processes, we determined that a mobile application for both clients and care professionals was the ideal solution.{" "}
+        After thoroughly understanding MyCare Assistant&apos;s business processes, we determined that a mobile application for both clients and care professionals was the ideal solution.{" "}
         <span style={styles.highlight}>
           This app empowers clients to monitor care professional activities, including clock-in and clock-out times, providing transparency and peace of mind. Care professionals, in turn, can use the app to manage their schedules, accepting or declining care service requests based on their availability and preferences. Furthermore, the Care Professional app provides access to affordable courses designed to enhance their skill sets and professional development.
         </span>
