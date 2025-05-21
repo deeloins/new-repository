@@ -146,13 +146,13 @@
   }
 
   /* Image Component adjustments */
-  :global(.image-card img) {
-    width: 100% !important;
-    height: 100px !important;
-  }
+.container :global(.image-card img) {
+  width: 100% !important;
+  height: 100px !important;
+}
 
   /* Next/Image override for responsiveness */
-  :global(.next-image img) {
+ .container :global(.next-image img) {
     max-width: 100%;
     height: auto;
   }
