@@ -23,9 +23,9 @@ const Quote = () => {
           className={`absolute left-[52px] top-[421px] w-[321px] text-[24px] leading-[36px] text-[#444343] font-medium text-right font-poppins`}
         >
           For me, <span className="text-white">design</span> is more than{" "}
-          <span className="text-white">aesthetics</span>; it's about{" "}
+          <span className="text-white">aesthetics</span>; it&apos;s about{" "}
           <span className="text-white">creating solutions</span> that seamlessly
-          integrate into <span className="text-white">people's</span> lives and
+          integrate into <span className="text-white">people&apos;s</span> lives and
           make a <span className="text-white">positive impact</span>.
         </div>
       </div>
@@ -46,10 +46,10 @@ const Quote = () => {
           {/* Right Quote Text - Desktop (original) */}
           <div className="w-full md:w-[500px] text-left md:text-right text-[20px] sm:text-[30px] lg:text-[42px] leading-[1.5] text-[#444343] font-medium font-poppins">
             For me, <span className="text-white">design</span> is more than{" "}
-            <span className="text-white">aesthetics</span>; it's about{" "}
+            <span className="text-white">aesthetics</span>; it&apos;s about{" "}
             <span className="text-white">creating solutions</span> that
             seamlessly integrate into{" "}
-            <span className="text-white">people's</span> lives and make a{" "}
+            <span className="text-white">people&apos;s</span> lives and make a{" "}
             <span className="text-white">positive impact</span>.
           </div>
         </div>
