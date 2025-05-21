@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Figtree, Poppins } from "next/font/google";
+import { Figtree } from "next/font/google";
 
 const figtree = Figtree({ subsets: ["latin"], weight: "900" });
 
