@@ -3,7 +3,6 @@ import React from "react";
 import { Figtree, Poppins } from "next/font/google";
 
 const figtree = Figtree({ subsets: ["latin"], weight: "900" });
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function LearningOutcomesSection() {
   return (
