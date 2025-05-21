@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 import styles from "./AboutPage.module.css";
 import Sidebar from "@/components/SliderBar";
