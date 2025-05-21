@@ -1,26 +1,295 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* globals.css */
+/* Prevent layout shift */
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: 'Bruno Ace';
+  src: url('/fonts/BrunoAce-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  overflow: visible;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Update project-card styles for better responsiveness */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  aspect-ratio: 4/5;
+  cursor: pointer;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: rgb(44 44 44 / var(--tw-border-opacity, 1));
+  padding: 8px;
+  gap: 8px;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: 100%;
+  max-width: 408px;
+}
+
+.project-card .rectangle {
+  width: 392px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.project-card h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 16px 0;
+  /* Equivalent to my-4 */
+}
+
+.project-card h3 {
+  position: absolute;
+  /* Position text relative to the container */
+  bottom: 10px;
+  /* Place the text near the bottom of the image */
+  left: 10px;
+  /* Add some padding from the left edge */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 35px 10px;
+  /* Add padding for better spacing */
+  border-radius: 5px;
+  /* Optional: rounded corners for the text background */
+}
+
+.toolstack-container {
+  position: absolute;
+  width: 400px;
+  height: 218px;
+
+  /* Moves the container lower */
+  background: rgba(174, 174, 174, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/* Title styling */
+.toolstack-title {
+  position: absolute;
+  width: 352px;
+  height: 22px;
+  left: 24px;
+  top: 24px;
+
+  font-family: 'Bruno Ace', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+
+  color: #FFFFFF;
+}
+
+
+
+/* Adjust rows while keeping the original layout */
+.top-row,
+.bottom-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* Moves tool rows slightly lower */
+.top-row {
+  margin-top: 50px;
+}
+
+.bottom-row {
+  margin-top: 15px;
+  padding-left: 2px;
+}
+
+.tool {
+  position: relative;
+  width: 52px;
+  height: 52px;
+}
+
+.tool-image {
+  width: 52px;
+  height: 52px;
+  border-radius: 5px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 80px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 4px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+  .toolstack-title {
+    font-size: 16px;
+    top: 20px;
+    /* Slightly lower */
+    left: 20px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .toolstack-title {
+    font-size: 14px;
+    top: 18px;
+    left: 16px;
+  }
+}
+
+@media (min-width: 251px) and (max-width: 419px) {
+  .toolstack-container {
+    width: 90%;
+    max-width: 384px;
+    height: auto;
+    padding: 15px;
+    display: grid;
+    grid-column: inherit;
+    align-items: center;
+  }
+
+  .toolstack-title {
+    font-size: 12px;
+    top: 15px;
+    left: 12px;
+  }
+
+  @media screen and (min-width: 355px) and (max-width: 419px) {
+    .toolstack-container {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+
+    .toolstack-title {
+      font-size: 12px;
+      top: 15px;
+      left: 12px;
+    }
+
+    .top-row,
+    .bottom-row {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tool {
+      width: 100%;
+      width: 48px;
+      height: 48px;
+    }
+
+    .tool-image {
+      width: 100%;
+      width: 48px;
+      height: 48px;
+    }
+
+    .tooltip {
+      bottom: 70px;
+      width: 70px;
+      height: 25px;
+      background-color: #000;
+    }
+
+  }
+
+  @media (min-width: 251px) and (max-width: 419px) {
+
+    .top-row,
+    .bottom-row {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tooltip {
+      bottom: 60px;
+      width: 65px;
+      height: 22px;
+      font-size: 10px;
+      padding: 2px 6px;
+    }
+  }
+
+}
+
+.project-card .rectangle,
+.project-card>div>div {
+  width: 100% !important;
+  max-width: 100%;
+  padding: 8px;
+}
+
+.project-card>div>div:nth-child(3) {
+  padding: 0 !important;
+  /* Remove padding */
+  display: flex !important;
+  /* Keep as flex */
+  align-items: stretch !important;
+  /* Stretch items */
+  justify-content: stretch !important;
+  /* Stretch items */
+  overflow: hidden !important;
+  /* Hide overflow */
+}
+
+.project-card:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

@@ -1,0 +1,349 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #090707;
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: auto auto auto;
+    /* Three rows now */
+    gap: 20px;
+    width: 100%;
+    max-width: 1240px;
+}
+
+/* Left Column */
+.profileCard {
+    grid-column: 1;
+    grid-row: 1;
+    height: fit-content;
+}
+
+.aboutMeCard {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Center Column */
+.centerColumn {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Column - Precise Positioning */
+.experienceCard {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.educationWrapper {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 30px;
+    /* Pushed down from experience */
+}
+
+.toolsWrapper {
+    grid-column: 3;
+    grid-row: 3;
+    margin-top: -320px;
+    /* Pulled up toward education */
+}
+
+/* Card Styling */
+.cardContent,
+.aboutMeContent {
+    background: rgba(174, 174, 174, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 24px;
+    height: 100%;
+}
+
+
+.bioText {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 16px;
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(62.48% 62.48% at 50% 50%, rgba(127, 125, 125, 0) 0%, #191818 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cvButton {
+    width: 125px;
+    height: 32px;
+    background: #444343;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.cvText {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.heroCard {
+    grid-column: 2;
+    grid-row: 1;
+    height: 508px;
+    margin-bottom: 20px;
+}
+
+.profileImageContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.profileBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(62.48% 62.48% at 50% 50%, rgba(127, 125, 125, 0) 0%, #191818 100%);
+}
+
+.profileImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profileImage {
+    object-fit: contain;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+}
+
+.speechBubble1,
+.speechBubble2,
+.speechBubble3,
+.speechBubble4 {
+    position: absolute;
+    left: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 12px;
+    background: rgba(48, 48, 48, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: 6px 12px;
+}
+
+.speechBubble1 {
+    top: 385px;
+    border-radius: 8px 20px 20px 2px;
+}
+
+.speechBubble2 {
+    top: 413px;
+    border-radius: 20px;
+}
+
+.speechBubble3 {
+    top: 441px;
+    border-radius: 20px;
+}
+
+.speechBubble4 {
+    top: 469px;
+    border-radius: 2px 20px 20px 8px;
+}
+
+.emailLink {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+}
+
+.experienceCard {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.aboutMeCard {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.aboutMeContent {
+    width: 100%;
+    height: 100%;
+    background: rgba(174, 174, 174, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+}
+
+.aboutMeTitle {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.05em;
+    margin-bottom: 16px;
+}
+
+.aboutMeText {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    bottom: 19px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0px 0.6px 0.6px rgba(0, 0, 0, 0.25));
+}
+
+.photoCard {
+    grid-column: 2;
+    grid-row: 2;
+    height: 509px;
+}
+
+.sliderContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.educationToolsCard {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.educationWrapper,
+.toolsWrapper {
+    flex: none;
+    height: auto;
+}
+
+@media (max-width: 1300px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1300px) {
+    .educationToolsCard {
+        transform: none;
+        /* Remove transform on smaller screens */
+    }
+}
+
+@media (max-width: 1240px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: [row1] 100px [row2] auto [row3] auto;
+    }
+
+    .aboutMeCard {
+        margin-top: 0;
+        grid-area: 2 / 1;
+    }
+
+    .educationToolsContainer {
+        grid-area: 3 / 1 / span 1 / span 2;
+        gap: 20px;
+    }
+
+    .educationWrapper {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .heroCard,
+    .photoCard {
+        height: 400px;
+    }
+
+    .aboutMeCard {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .bioText {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .cardContent {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .speechBubble1 {
+        top: 320px;
+    }
+
+    .speechBubble2 {
+        top: 345px;
+    }
+
+    .speechBubble3 {
+        top: 370px;
+    }
+
+    .speechBubble4 {
+        top: 395px;
+    }
+}

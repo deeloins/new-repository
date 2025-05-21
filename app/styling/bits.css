@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import "tailwindcss" */
+
+/* Add to bits.css */
+.recent-projects-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.line-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 93px;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background: #9E9E9E;
+}
+
+.button-wrapper {
+    position: relative;
+    padding: 0 2rem;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 32px;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* Copy Icon Container */
+button>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+}
+
+/* SVG Paths */
+button svg path {
+    stroke: white;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+/* Hover Effects */
+button:hover {
+    background: #2a2a2a !important;
+}
+
+button:hover>div {
+    background: #404040;
+}
+
+.shadow-glow {
+    box-shadow: 0px 0px 6px rgba(232, 172, 49, 0.4);
+}
+
+.textSubHead {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #9E9E9E;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+}
+
+.recentProjectHeading {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.03em;
+}
+
+/* Image hover transition */
+.group:hover .group-hover\:opacity-0 {
+    opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+}
+
+.remote {
+    border: 1px solid transparent;
+    background-color: #6e6b6b;
+    border-radius: 20px;
+    padding: 0 5px;
+    font-size: xx-small;
+    margin-left: 5px;
+    color: #d3cdcd;
+}
+
+.logo {
+    height: 1.5rem;
+    width: 4rem;
+}
+
+.recentProjectHeading,
+.proficientHeader {
+    font-family: "Figtree", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.stroke {
+    background-color: white;
+}
+
+.aboutMe {
+    color: white;
+}
+
+.subheader,
+.specifications {
+    font-family: "Bruno Ace", sans-serif;
+    color: white;
+}
+
+.companyDiv {
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+
+.experienceSection {
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+}
+
+/* Adjustments for medium screens */
+@media screen and (max-width: 1024px) {
+    .imageSlider {
+        width: 85vw;
+        min-height: 35vh;
+    }
+}
+
+.imageSlider {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    min-height: 25vh;
+    flex-shrink: 1;
+    /* Allows it to scale down */
+}
+
+/* Between 991px and 1024px */
+@media screen and (max-width: 1024px) and (min-width: 991px) {
+    .imageSlider {
+        width: 50vw;
+        /* Reduce width */
+        min-height: 24vh;
+        /* Adjust height */
+        max-width: 380px;
+        /* Further limit max size */
+    }
+}
+
+/* Adjustments for medium screens */
+@media screen and (max-width: 991px) {
+    .imageSlider {
+        width: 55vw;
+        min-height: 22vh;
+        max-width: 360px;
+    }
+}
+
+/* Smaller screens */
+@media screen and (max-width: 768px) {
+    .imageSlider {
+        width: 50vw;
+        min-height: 20vh;
+        max-width: 340px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .imageSlider {
+        width: 45vw;
+        min-height: 18vh;
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .recentProjectHeading {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .stroke {
+        margin-top: 0.7rem;
+        background-color: white;
+    }
+
+    .subheader {
+        padding: 0.6rem;
+    }
+
+    .recentProjects {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    /* proficient Areas */
+    .proficientHeader {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .specifications {
+        font-size: 13px;
+        padding: 0 0.7rem;
+    }
+
+    .areaContainer {
+        width: 19rem;
+        padding: 0.7rem;
+        border-color: #6e6b6b;
+    }
+
+    .proficientAreaGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .aboutMe {
+        margin-top: 3.5rem;
+    }
+
+    .experienceSection {
+        padding: 0.5rem;
+        width: 18rem;
+
+        .divider {
+            margin-top: 1rem;
+        }
+    }
+
+    .remotebtnflex {
+        display: flex;
+        gap: 0.2rem;
+    }
+
+    .remote {
+        display: none;
+    }
+
+    .companylogos {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .recentProjectHeading {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+
+    .stroke {
+        margin-top: 0.7rem;
+        background-color: white;
+    }
+
+    .subheader {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .recentProjects {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    /* proficient Areas */
+    .proficientHeader {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+
+    .specifications {
+        font-size: 20px;
+        padding: 0 0.7rem;
+    }
+
+    .areaContainer {
+        width: 22rem;
+        padding: 1.5rem;
+    }
+
+    .proficientAreaGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1.5rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* about me */
+    .aboutMe {
+        margin-top: 3.5rem;
+    }
+
+    .experienceSection {
+        padding: 1.5rem;
+        width: 30rem;
+
+        .divider {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .experience,
+    .education {
+        margin-bottom: 1rem;
+    }
+
+    .companylogos {
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .recentProjectHeading {
+        font-size: 3.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .stroke {
+        margin-top: 0.7rem;
+    }
+
+    .recentProjects {
+        display: flex;
+        gap: 3rem;
+        padding: 2.5rem;
+    }
+
+    .proficientHeader {
+        margin-top: 3rem;
+        font-size: 4rem;
+    }
+
+    .specifications {
+        font-size: 20px;
+    }
+
+    .areaContainer {
+        padding: 0.7rem;
+    }
+
+    .proficientAreaGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding-top: 1.5rem;
+    }
+
+    .aboutMe {
+        margin-top: 3.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experienceSection {
+        padding: 1.5rem;
+        width: 30rem;
+
+        .divider {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .experience,
+    .education {
+        margin-bottom: 1rem;
+    }
+
+    .companylogos {
+        display: flex;
+        gap: 3rem;
+    }
+}

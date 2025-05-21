@@ -1,0 +1,102 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 25px;
+  left: 8px;
+  height: 90vh;
+  width: 40px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(155, 155, 155, 1);
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #ffd700;
+}
+
+.tooltip {
+  position: absolute;
+  left: 40px;
+  /* show label to the right of icon */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1b1b1b;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.iconWrapper:hover .tooltip {
+  opacity: 1;
+}
+
+.copyContainer {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 40px;
+    height: auto;
+    top: 10px;
+    left: 10px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .copyContainer {
+    display: none;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+}
