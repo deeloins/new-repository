@@ -89,7 +89,7 @@ const MyCareAssistants: React.FC = () => {
           {/* Image Cards */}
           <div>
             <ImageCardComponent
-              src="/images/scene 18(first image).png"
+              src="/images/Scene 18(first image).png"
               alt="Scene 1"
               width={1272}
               height={705}
@@ -101,7 +101,7 @@ const MyCareAssistants: React.FC = () => {
             MYQURA CLIENT
           </h2>
           <ImageCardComponent
-            src="/images/shot(second image).png"
+            src="/images/Shot(second image).png"
             alt="Scene 2"
             width={1272}
             height={705}
@@ -158,6 +158,7 @@ const MyCareAssistants: React.FC = () => {
               projectTitle="Restaurant Website"
               description="Redesign"
               imageSrc="/images/Scene 12 1.png"
+              nextPath="./tantalizer"
             />
           </div>
 
