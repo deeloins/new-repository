@@ -15,7 +15,6 @@ import { Bruno_Ace, Poppins, Figtree } from "next/font/google";
 import ToggleButton from "@/components/ToggleButton";
 import NextProjectButton from "@/components/ArrowButton";
 import Sidebar from "@/components/SliderBar";
-import ProjectCard from "@/components/ProductCard";
 
 interface PainpointProps {
   children: ReactNode;
