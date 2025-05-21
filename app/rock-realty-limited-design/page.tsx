@@ -135,6 +135,7 @@ const MyCareAssistants: React.FC = () => {
               projectTitle="Courier Service App"
               description="for Delivery Service"
               imageSrc="/images/Scene 12 1 (2).png"
+              nextPath="./kwats-page-design"
             />
           </div>
 
