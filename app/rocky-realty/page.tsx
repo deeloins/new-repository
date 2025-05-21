@@ -65,7 +65,7 @@ export default function RockRealty() {
         <div className="w-full max-w-[1096px]">
           <div className="relative w-full h-0 pb-[75.73%]">
             <Image
-              src="/assets/Rock Realty main.png"
+              src="/assets/Rock Realty Main.png"
               alt="Rock Realty Main"
               fill
               className="object-cover rounded-[16px] md:rounded-[32px]"
