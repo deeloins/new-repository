@@ -317,7 +317,7 @@ export function Tantalizer() {
             <h2
               className={`text-[27px] md:text-4xl lg:text-2xl ${figtree.className}`}
             >
-              Website Visitor's Painpoint
+              Website Visitor&apos;s Painpoint
             </h2>
             <div className="bg-[#272727] rounded-2xl w-[287px] h-[215px] flex items-center justify-center text-[#BDBDBD] text-center px-6 text-[18px] leading-[26px] font-semibold">
               I had 18 users visit the website, 12 were new visitors.
