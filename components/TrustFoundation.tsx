@@ -33,7 +33,7 @@ export default function TrustFoundationSection() {
         <p
           className={`${poppins.className} text-[#BDBDBD] text-[16px] sm:text-[18px] md:text-[22px] lg:text-[28px] leading-[1.6] sm:leading-[1.7]`}
         >
-          The homepage's UX writing was carefully crafted with a content
+          The homepage&apos;s UX writing was carefully crafted with a content
           strategist, portraying Rock Realty as a reliable and accessible
           partner. We aimed to simplify complex real estate concepts, providing
           clear value propositions and guiding users toward their investment
@@ -45,7 +45,7 @@ export default function TrustFoundationSection() {
         >
           Through iterative design and stakeholder input, we created a welcoming
           and informative homepage. Clear calls-to-action encourage exploration
-          of property listings and direct engagement with Rock Realty's team,
+          of property listings and direct engagement with Rock Realty&apos;s team,
           laying the groundwork for a successful client relationship.
         </p>
       </div>
