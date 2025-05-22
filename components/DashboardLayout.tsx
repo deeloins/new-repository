@@ -14,7 +14,7 @@ const AboutMeCards = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.grid}>
-        {/* Top Left - Bio Card */}
+        {/* Profile Card */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -71,25 +71,29 @@ const AboutMeCards = () => {
                   priority
                 />
               </div>
-              <div className={styles.speechBubble1}>Hello 👋🏻</div>
-              <div className={styles.speechBubble2}>My name is Lawal Jimoh</div>
-              <div className={styles.speechBubble3}>
-                But you can call me LA 😉
-              </div>
-              <div className={styles.speechBubble4}>
-                Feel free to grab my{" "}
-                <a
-                  href="mailto:strategy@stringifyts.com"
-                  className={styles.emailLink}
-                >
-                  email
-                </a>{" "}
-                🤗
+              <div className={styles.speechBubbleContainer}>
+                <div className={styles.speechBubble1}>Hello 👋🏻</div>
+                <div className={styles.speechBubble2}>
+                  My name is Lawal Jimoh
+                </div>
+                <div className={styles.speechBubble3}>
+                  But you can call me LA 😉
+                </div>
+                <div className={styles.speechBubble4}>
+                  Feel free to grab my{" "}
+                  <a
+                    href="mailto:strategy@stringifyts.com"
+                    className={styles.emailLink}
+                  >
+                    email
+                  </a>{" "}
+                  🤗
+                </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Slider - Moved directly below profile */}
+          {/* Slider */}
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -104,7 +108,6 @@ const AboutMeCards = () => {
 
         {/* Right Column */}
         <div className={styles.rightColumn}>
-          {/* Experience */}
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -114,23 +117,20 @@ const AboutMeCards = () => {
             <Experience />
           </motion.div>
 
-          {/* Education & Tools - Now properly visible */}
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className={styles.educationWrapper}
           >
-            <div className={styles.educationToolsCard}>
-              <EducationCard />
-            </div>
+            <EducationCard />
           </motion.div>
         </div>
-        <div className={styles.toolsWrapper}>
-          <ToolStackPage />
-        </div>
+          <div className={styles.toolsWrapper}>
+            <ToolStackPage />
+          </div>
 
-        {/* Left Bottom - About Me */}
+        {/* About Me Card */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -144,10 +144,10 @@ const AboutMeCards = () => {
             <p className={styles.aboutMeText}>
               Product design is more than a career; it&apos;s the result of a
               lifelong passion for exploration. I started with building
-              WordPress sites and blogging as a teen, I&apos;ve always been drawn to
-              creating and problem-solving. Post-graduation, I tried data
-              analytics because I felt my math skills would come in handy and
-              then affiliate marketing drawn by its appeal. Though I found
+              WordPress sites and blogging as a teen, I&apos;ve always been
+              drawn to creating and problem-solving. Post-graduation, I tried
+              data analytics because I felt my math skills would come in handy
+              and then affiliate marketing drawn by its appeal. Though I found
               success in them, neither provided the meaningful impact I sought.
               Driven by a strong desire to create meaningful impact, I spent
               considerable time searching for the right fit. The turning point

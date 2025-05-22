@@ -116,20 +116,6 @@ export default function Slider() {
         quality={90}
         sizes="(max-width: 768px) 100vw, 50vw"
       />
-
-      {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              currentIndex === index ? "bg-white" : "bg-white/50"
-            }`}
-            aria-label={`Go to image ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
