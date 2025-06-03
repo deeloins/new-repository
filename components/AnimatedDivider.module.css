@@ -4,6 +4,12 @@
     justify-content: center;
     padding: 20px 0;
     position: relative;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.dividerContainer:hover {
+    opacity: 0.8;
 }
 
 .line {
@@ -19,7 +25,9 @@
     position: relative;
     width: 50px;
     height: 50px;
-    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rotatingArc {
@@ -36,15 +44,17 @@
 
 .arrowDown {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 25px;
+    /* Exactly half of 50px */
+    left: 25px;
+    /* Exactly half of 50px */
     width: 12px;
     height: 12px;
     border-left: 2px solid #666;
     border-bottom: 2px solid #666;
     transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
 }
-
 
 /* 👇 Mobile View (responsive changes) */
 @media (max-width: 600px) {
@@ -60,7 +70,5 @@
         height: 50px;
         margin: 0 0;
     }
-
-    .rotatingArc {}
 
 }

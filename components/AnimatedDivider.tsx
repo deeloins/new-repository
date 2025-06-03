@@ -2,9 +2,19 @@
 import { motion } from "framer-motion";
 import styles from "./AnimatedDivider.module.css";
 
-const AnimatedDivider = () => {
+const AnimatedDivider = ({ targetSectionId = "next-section" }) => {
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById(targetSectionId);
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <div className={styles.dividerContainer}>
+    <div className={styles.dividerContainer} onClick={scrollToNextSection}>
       <div className={styles.line} />
       <div className={styles.centerIcon}>
         <motion.div

@@ -11,16 +11,33 @@ const page = () => {
   return (
     <main className="bg-[#090707] bg-cover bg-no-repeat bg-center">
       <Sidebar />
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
+
       <div style={{ marginBottom: "150px" }}>
-        <AnimatedDivider />
+        <AnimatedDivider targetSectionId="quote" />
       </div>
 
-      <Quote />
-      <RecentProjectSection />
-      <ProficientAreas />
-      <GetConnected />
-      <ThankYouFooter />
+      <section id="quote">
+        <Quote />
+      </section>
+
+      <section id="recent-projects">
+        <RecentProjectSection />
+      </section>
+
+      <section id="proficient-areas">
+        <ProficientAreas />
+      </section>
+
+      <section id="get-connected">
+        <GetConnected />
+      </section>
+
+      <section id="thank-you">
+        <ThankYouFooter />
+      </section>
     </main>
   );
 };

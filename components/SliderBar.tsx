@@ -17,12 +17,20 @@ const Sidebar: React.FC = () => {
     navigator.clipboard.writeText(window.location.href);
   };
 
+  // Find the home path
+  const homePath =
+    navItems.find((item) => item.label === "Home")?.path || "./hero-section";
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.line}></div>
 
-      {/* Logo */}
-      <div className={styles.logo}>
+      {/* Clickable Logo */}
+      <div
+        className={styles.logo}
+        onClick={() => router.push(homePath)}
+        style={{ cursor: "pointer" }}
+      >
         <Image src="/images/LAJ logo 3.png" alt="Logo" width={24} height={24} />
       </div>
 
