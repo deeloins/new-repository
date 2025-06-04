@@ -17,39 +17,41 @@ const ToolStack = ({ tools }: { tools: ToolProps[] }) => {
   return (
     <div className="toolstack-container">
       <div className="toolstack-title">TOOLS STACK</div>
-      <div className="top-row">
-        {topRowTools.map((tool, index) => (
-          <div
-            key={index}
-            className="tool"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {hoveredIndex === index && (
-              <div className="tooltip">{tool.name}</div>
-            )}
-            <img
-              src={tool.image}
-              alt={tool.name}
-              className="tool-image w-full"
-            />
-          </div>
-        ))}
-      </div>
-      <div className="bottom-row">
-        {bottomRowTools.map((tool, index) => (
-          <div
-            key={index}
-            className="tool"
-            onMouseEnter={() => setHoveredIndex(index + 6)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {hoveredIndex === index + 6 && (
-              <div className="tooltip bg-black">{tool.name}</div>
-            )}
-            <img src={tool.image} alt={tool.name} className="tool-image" />
-          </div>
-        ))}
+      <div className="tools">
+        <div className="top-row">
+          {topRowTools.map((tool, index) => (
+            <div
+              key={index}
+              className="tool"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {hoveredIndex === index && (
+                <div className="tooltip">{tool.name}</div>
+              )}
+              <img
+                src={tool.image}
+                alt={tool.name}
+                className="tool-image w-full"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="bottom-row">
+          {bottomRowTools.map((tool, index) => (
+            <div
+              key={index}
+              className="tool"
+              onMouseEnter={() => setHoveredIndex(index + 6)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {hoveredIndex === index + 6 && (
+                <div className="tooltip bg-black">{tool.name}</div>
+              )}
+              <img src={tool.image} alt={tool.name} className="tool-image" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

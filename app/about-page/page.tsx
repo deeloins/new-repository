@@ -23,12 +23,14 @@ const About = () => {
           </div>
 
           <div style={{ marginBottom: "150px" }}>
-            <AnimatedDivider />
+            <AnimatedDivider targetSectionId="about-me-cards" />
           </div>
 
-          <div className={styles.space}>
-            <AboutMeCards />
-          </div>
+          <section id="about-me-cards">
+            <div className={styles.space}>
+              <AboutMeCards />
+            </div>
+          </section>
 
           <div>
             <GetConnected />

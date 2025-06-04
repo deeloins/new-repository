@@ -82,7 +82,7 @@ const ThankYouFooter = () => {
       {/* THANK YOU Message */}
       <div className={`${styles.thankYouMessage} ${figtree.className}`}>
         THANK
-        <span className={styles.highlight}>YOU ❤</span>
+        <span className={styles.highlight}>YOU 🖤</span>
       </div>
     </div>
   );
