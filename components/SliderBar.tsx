@@ -8,9 +8,9 @@ const Sidebar: React.FC = () => {
   const router = useRouter();
 
   const navItems = [
-    { icon: <RxHome />, label: "Home", path: "./hero-section" },
-    { icon: <RxPerson />, label: "About", path: "./about-page" },
-    { icon: <RxDesktop />, label: "Projects", path: "./project-page" },
+    { icon: "/assets/home.svg", label: "Home", path: "./hero-section" },
+    { icon: "/assets/about.svg", label: "About", path: "./about-page" },
+    { icon: "/assets/projects.svg", label: "Projects", path: "./project-page" },
   ];
 
   const handleCopy = () => {

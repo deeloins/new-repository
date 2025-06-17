@@ -9,7 +9,7 @@ import AnimatedDivider from "@/components/AnimatedDivider";
 
 const page = () => {
   return (
-    <main className="bg-[#090707] bg-cover bg-no-repeat bg-center">
+    <main>
       <Sidebar />
       <section id="hero">
         <Hero />
