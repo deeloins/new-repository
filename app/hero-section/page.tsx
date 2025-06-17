@@ -7,7 +7,7 @@ import ProficientAreas from "../proficient-areas/page";
 import Sidebar from "@/components/SliderBar";
 import AnimatedDivider from "@/components/AnimatedDivider";
 
-const page = () => {
+const HeroSectionPage = () => {
   return (
     <main>
       <Sidebar />
@@ -42,4 +42,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HeroSectionPage;
