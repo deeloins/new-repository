@@ -1,11 +1,5 @@
-import CaseStudyPage from "./case-study/page";
-
 const page = () => {
-  return (
-    <main>
-      <CaseStudyPage />
-    </main>
-  );
+  return <main>./hero-section/page.tsx</main>;
 };
 
 export default page;
