@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { RxPerson, RxHome, RxDesktop, RxCopy } from "react-icons/rx";
+import { useState } from "react";
 import styles from "./SlideBar.module.css";
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
+  const [copied, setCopied] = useState(false);
 
   const navItems = [
     { icon: "/assets/home.svg", label: "Home", path: "./hero-section" },
@@ -14,10 +15,15 @@ const Sidebar: React.FC = () => {
   ];
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href);
+    const email = "strategy@stringifyts.com";
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
-  // Find the home path
   const homePath =
     navItems.find((item) => item.label === "Home")?.path || "./hero-section";
 
@@ -31,10 +37,10 @@ const Sidebar: React.FC = () => {
         onClick={() => router.push(homePath)}
         style={{ cursor: "pointer" }}
       >
-        <Image src="/images/LAJ logo 3.png" alt="Logo" width={24} height={24} />
+        <Image src="/images/LAJ_logo_3.png" alt="Logo" width={24} height={24} />
       </div>
 
-      {/* Navigation icons */}
+      {/* Navigation Icons */}
       <div className={styles.icons}>
         {navItems.map((item) => (
           <div
@@ -55,15 +61,23 @@ const Sidebar: React.FC = () => {
         ))}
       </div>
 
-      {/* Copy button */}
+      {/* Copy Button */}
       <div className={`${styles.icons} ${styles.copyContainer}`}>
         <div
           className={styles.iconWrapper}
           onClick={handleCopy}
           style={{ cursor: "pointer" }}
         >
-          <RxCopy className={styles.icon} />
-          <span className={styles.tooltip}>Copy URL</span>
+          <Image
+            src={copied ? "/assets/copy-success.svg" : "/assets/copy.svg"}
+            alt={copied ? "Copied" : "Copy"}
+            width={24}
+            height={24}
+            className={styles.icon}
+          />
+          <span className={styles.tooltip}>
+            {copied ? "Email copied!" : "Copy URL"}
+          </span>
         </div>
       </div>
     </div>
