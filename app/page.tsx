@@ -1,5 +1,11 @@
+import Hero from "../components/Hero";
+
 const page = () => {
-  return <main>./hero-section/page.tsx</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 };
 
 export default page;
