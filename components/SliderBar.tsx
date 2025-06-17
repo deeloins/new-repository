@@ -37,7 +37,7 @@ const Sidebar: React.FC = () => {
         onClick={() => router.push(homePath)}
         style={{ cursor: "pointer" }}
       >
-        <Image src="/images/LAJ_logo_3.png" alt="Logo" width={24} height={24} />
+        <Image src="/images/LAJ logo 3.png" alt="Logo" width={24} height={24} />
       </div>
 
       {/* Navigation Icons */}

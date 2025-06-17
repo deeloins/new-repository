@@ -277,6 +277,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .project-card {
+    transform: scale(0.85);
+    /* Scales down the card slightly */
+  }
+}
+
 .project-card .rectangle,
 .project-card>div>div {
   width: 100% !important;

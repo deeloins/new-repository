@@ -47,7 +47,7 @@ export default function RootLayout({
         <div className="fixed -z-10 w-full h-full">
           <div className="absolute w-[1200px] h-[1200px] left-[calc(50%-600px+28px)] top-[-103px]">
             <Image
-              src="/assets/image.png"
+              src="/images/shine.png"
               alt="Masked Background"
               fill
               className="object-cover"

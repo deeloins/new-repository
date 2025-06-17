@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       {/* Mobile Version (shows on screens < 768px) */}
-      <section className="relative w-full h-screen max-h-[713px] bg-[#090707] overflow-hidden md:hidden">
+      <section className="relative w-full h-screen max-h-[713px] overflow-hidden md:hidden">
         {/* Background gradient */}
         <div className="absolute inset-x-0 top-0 h-[600px] bg-gradient-to-b from-[#090707] to-transparent via-[#090707] via-[58.11%] z-0"></div>
 

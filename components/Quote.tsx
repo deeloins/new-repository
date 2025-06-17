@@ -3,12 +3,14 @@ import React from "react";
 
 const Quote = () => {
   return (
-    <section className="relative w-full bg-[#090707] overflow-x-hidden">
+    <section className="relative w-full overflow-x-hidden">
       {/* Mobile Layout (below 768px) */}
       <div className="md:hidden w-full h-[692px] px-5 relative">
         {/* Left Quote Text - Mobile */}
         <div className="absolute left-5 top-[73px] w-[220px]">
-          <div className={`text-[40px] leading-[48px] font-black text-[#444343] ${figtree.className}`}>
+          <div
+            className={`text-[40px] leading-[48px] font-black text-[#444343] ${figtree.className}`}
+          >
             <div>GREAT DESIGN</div>
             <div>IS HARD,</div>
             <div className="text-white">I MAKE IT</div>
@@ -17,12 +19,14 @@ const Quote = () => {
         </div>
 
         {/* Right Quote Text - Mobile */}
-        <div className={`absolute left-[52px] top-[421px] w-[calc(100%-104px)] text-[24px] leading-[36px] text-[#444343] font-medium text-right font-poppins`}>
+        <div
+          className={`absolute left-[52px] top-[421px] w-[calc(100%-104px)] text-[24px] leading-[36px] text-[#444343] font-medium text-right font-poppins`}
+        >
           For me, <span className="text-white">design</span> is more than{" "}
           <span className="text-white">aesthetics</span>; it&apos;s about{" "}
           <span className="text-white">creating solutions</span> that seamlessly
-          integrate into <span className="text-white">people&apos;s</span> lives and
-          make a <span className="text-white">positive impact</span>.
+          integrate into <span className="text-white">people&apos;s</span> lives
+          and make a <span className="text-white">positive impact</span>.
         </div>
       </div>
 
@@ -57,7 +61,7 @@ const Quote = () => {
         </div>
       </div>
 
-     {/* Desktop Layout (1024px and above) with 1024px-specific adjustments */}
+      {/* Desktop Layout (1024px and above) with 1024px-specific adjustments */}
       <div className="hidden lg:block w-full py-20">
         <div className="max-w-[1382px] mx-auto px-12">
           <div className="flex justify-between items-start gap-8">

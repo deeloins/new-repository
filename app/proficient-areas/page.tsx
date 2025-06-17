@@ -51,7 +51,7 @@ const ProficientAreas = () => {
   ];
 
   return (
-    <div className="w-full bg-[#090707] flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+    <div className="w-full flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
       {/* Section Titles - Adjusted for 1024px+ */}
       <div className="w-full max-w-[1200px] pl-[30px] md:pl-[60px] lg:pl-[80px] flex flex-col md:flex-row justify-between items-center md:items-start px-4 space-y-6 md:space-y-0">
         {/* Left Title */}
