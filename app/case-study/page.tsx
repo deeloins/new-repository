@@ -29,9 +29,7 @@ export default function CaseStudyPage() {
         minHeight: "100vh",
         margin: "0",
         padding: "40px 16px",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        overflowX: "hidden",
       }}
     >
       <Image

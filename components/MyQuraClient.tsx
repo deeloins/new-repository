@@ -48,15 +48,15 @@ export default function MyQuraClient() {
           <div className="descriptionBox">
             <div className="numberCircle">1</div>
             <p className="text">
-              I ensured that from the flash screen, it has a feel of human connection
-              and care.
+              I ensured that from the flash screen, it has a feel of human
+              connection and care.
             </p>
           </div>
           <div className="descriptionBox">
             <div className="numberCircle">2</div>
             <p className="text">
-              Intentionally, I used the pictures of humans to build up the expectation
-              of the new users.
+              Intentionally, I used the pictures of humans to build up the
+              expectation of the new users.
             </p>
           </div>
         </div>
@@ -64,15 +64,15 @@ export default function MyQuraClient() {
           <div className="descriptionBox">
             <div className="numberCircle">3</div>
             <p className="text">
-              A picture of a caregiver rendering help to a patient pictures what the
-              user should expect.
+              A picture of a caregiver rendering help to a patient pictures what
+              the user should expect.
             </p>
           </div>
           <div className="descriptionBox">
             <div className="numberCircle">4</div>
             <p className="text">
-              Intentionally, I used the pictures of humans to build up the expectation
-              of the new users.
+              Intentionally, I used the pictures of humans to build up the
+              expectation of the new users.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function MyQuraClient() {
               "The messages can be easily accessible in the case of support cases.",
               "There’s no second guessing of how to get started; the card explains the first thing to do.",
               "The services the users order more frequently are placed before them, making them easily accessible.",
-              "After a patient has been added, the card changes based on what’s next for the user."
+              "After a patient has been added, the card changes based on what’s next for the user.",
             ].map((text, index) => (
               <div className="descriptionBox" key={index}>
                 <div className="numberCircle">{index + 1}</div>
@@ -162,7 +162,7 @@ export default function MyQuraClient() {
           gap: 10px;
         }
         .image {
-          width: 100%
+          width: 80%
           height: auto;
           object-fit: cover;
           border-radius: 24px;
