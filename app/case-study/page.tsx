@@ -29,7 +29,6 @@ export default function CaseStudyPage() {
         minHeight: "100vh",
         margin: "0",
         padding: "40px 16px",
-        backgroundColor: "#000000",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

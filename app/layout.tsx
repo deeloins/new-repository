@@ -45,7 +45,7 @@ export default function RootLayout({
       >
         {/* Background for all pages */}
         <div className="fixed -z-10 w-full h-full">
-          <div className="absolute w-[1200px] h-[1200px] left-[calc(50%-600px+28px)] top-[-103px]">
+          <div className="absolute w-[1440px] h-[1440px] left-[calc(50%-600px+28px)] top-[-103px]">
             <Image
               src="/images/shine.png"
               alt="Masked Background"
