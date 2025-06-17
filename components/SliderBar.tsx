@@ -43,7 +43,13 @@ const Sidebar: React.FC = () => {
             onClick={() => router.push(item.path)}
             style={{ cursor: "pointer" }}
           >
-            <span className={styles.icon}>{item.icon}</span>
+            <Image
+              src={item.icon}
+              alt={item.label}
+              width={24}
+              height={24}
+              className={styles.icon}
+            />
             <span className={styles.tooltip}>{item.label}</span>
           </div>
         ))}
